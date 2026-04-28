@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>中国全国咖啡店地图</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>中国全国咖啡店地图</h1>
+      <p>查看各地咖啡店照片、特色与用户评价关键词</p>
+    </header>
+
+    <main>
+      <aside class="panel">
+        <label for="searchInput">按城市 / 店名搜索</label>
+        <input id="searchInput" type="text" placeholder="例如：上海、独立烘焙" />
+
+        <label for="featureFilter">按特色筛选</label>
+        <select id="featureFilter">
+          <option value="">全部特色</option>
+        </select>
+
+        <h2>店铺列表</h2>
+        <ul id="shopList"></ul>
+      </aside>
+
+      <section class="map-wrap">
+        <div id="map"></div>
+      </section>
+    </main>
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>
