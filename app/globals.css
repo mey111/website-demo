@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  @apply bg-latte text-bean;
+  background-image:
+    radial-gradient(circle at 20% 15%, rgba(255, 209, 102, 0.28), transparent 26%),
+    radial-gradient(circle at 80% 10%, rgba(189, 224, 254, 0.35), transparent 22%),
+    radial-gradient(circle at 90% 85%, rgba(255, 175, 204, 0.35), transparent 20%);
+  min-height: 100vh;
+}
+
+.sticker {
+  @apply rounded-3xl border border-white/60 bg-white/80 shadow-sticker backdrop-blur;
+}
