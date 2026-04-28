@@ -1,0 +1,152 @@
+:root {
+  --bg: #f7f3ee;
+  --card: #ffffff;
+  --text: #2e241e;
+  --accent: #7b4f2a;
+  --border: #e9dccc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+header {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+  background: linear-gradient(120deg, #fff7ef, #fbe8d2);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+header p {
+  margin: 0.4rem 0 0;
+  color: #5f4a3d;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 1rem;
+  height: calc(100vh - 96px);
+  padding: 1rem;
+}
+
+.panel {
+  overflow: auto;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin: 0.4rem 0;
+}
+
+input,
+select {
+  width: 100%;
+  margin-bottom: 0.75rem;
+  border: 1px solid #dcc4a9;
+  border-radius: 8px;
+  padding: 0.55rem 0.7rem;
+  font-size: 0.95rem;
+}
+
+h2 {
+  margin: 0.5rem 0;
+  font-size: 1.05rem;
+}
+
+#shopList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.65rem;
+}
+
+#shopList li {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.7rem;
+  background: #fffcf8;
+  cursor: pointer;
+}
+
+#shopList li:hover {
+  border-color: #c19062;
+}
+
+.shop-name {
+  font-weight: 700;
+}
+
+.shop-city {
+  font-size: 0.85rem;
+  color: #856954;
+}
+
+.shop-tags {
+  font-size: 0.84rem;
+  margin-top: 0.3rem;
+  color: #553f30;
+}
+
+.map-wrap {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--card);
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+.popup-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 0.4rem 0;
+}
+
+.popup-card h3 {
+  margin: 0;
+}
+
+.popup-card p {
+  margin: 0.35rem 0;
+  line-height: 1.35;
+}
+
+@media (max-width: 900px) {
+  main {
+    grid-template-columns: 1fr;
+    grid-template-rows: 45vh 1fr;
+    height: auto;
+  }
+
+  .panel {
+    order: 2;
+  }
+
+  .map-wrap {
+    order: 1;
+    height: 45vh;
+  }
+}
